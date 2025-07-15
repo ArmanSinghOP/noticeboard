@@ -1,0 +1,59 @@
+<!-- templates/user.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Notice Board - User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+</head>
+<body class="transition duration-300 ease-in-out bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-700 dark:bg-blue-900 text-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold tracking-wide">Community Notice Board</h1>
+    <div class="flex gap-4 items-center">
+      <button onclick="toggleDarkMode()" class="bg-white text-blue-800 font-semibold px-3 py-1 rounded hover:bg-blue-100 transition">
+        Toggle Theme
+      </button>
+      <button onclick="adminLogin()" class="bg-white text-blue-800 font-semibold px-3 py-1 rounded hover:bg-blue-100 transition">
+        Admin Panel
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+    <!-- Announcements -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-blue-600 dark:text-blue-300">
+        📢 Announcements
+      </h2>
+      <ul id="announcementList" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></ul>
+    </section>
+
+    <!-- Events -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-green-600 dark:text-green-300">
+        🎉 Events
+      </h2>
+      <ul id="eventList" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></ul>
+    </section>
+
+    <!-- Market -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2 text-purple-600 dark:text-purple-300">
+        🏷️ Buy/Sell/Rent
+      </h2>
+      <ul id="marketList" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></ul>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', path='/user.js') }}"></script>
+</body>
+</html>

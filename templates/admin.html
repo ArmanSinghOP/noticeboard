@@ -1,0 +1,46 @@
+<!-- templates/admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel - Community Notice Board</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+  <h1 class="text-xl font-bold">Admin Dashboard</h1>
+  <div class="flex gap-3">
+    <a href="/user" class="bg-white text-blue-800 px-4 py-2 rounded hover:bg-blue-100">User View</a>
+    <button onclick="logout()" class="bg-white text-blue-800 px-4 py-2 rounded hover:bg-red-100">Logout</button>
+  </div>
+</header>
+
+
+  <main class="p-6 max-w-4xl mx-auto">
+    <!-- FORM -->
+    <form onsubmit="submitNotice(event)" class="bg-white shadow p-6 rounded mb-8 space-y-4">
+      <div>
+        <label for="category" class="block font-semibold mb-1">Select Category</label>
+        <select id="category" class="w-full border border-gray-300 p-2 rounded">
+          <option value="announcements">Announcement</option>
+          <option value="events">Event</option>
+          <option value="market">Buy/Sell/Rent</option>
+        </select>
+      </div>
+      <div>
+        <label for="noticeText" class="block font-semibold mb-1">Notice Text</label>
+        <input type="text" id="noticeText" placeholder="Enter notice" required
+               class="w-full border border-gray-300 p-2 rounded" />
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Post Notice
+      </button>
+    </form>
+
+    <!-- NOTICES DISPLAY -->
+    <div id="noticesContainer" class="grid md:grid-cols-2 gap-4"></div>
+  </main>
+
+  <script src="{{ url_for('static', path='/admin.js') }}"></script>
+</body>
+</html>

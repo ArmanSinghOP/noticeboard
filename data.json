@@ -1,0 +1,38 @@
+{
+    "announcements": [
+        {
+            "id": "62f3d401-8b7e-4e37-b05b-6dd66eb1f96b",
+            "text": "Hello",
+            "timestamp": "2025-07-15T23:35:04.447379"
+        },
+        {
+            "id": "f10e15db-b316-4098-a167-1d5383737d64",
+            "text": "Hello",
+            "timestamp": "2025-07-15T23:41:29.498375"
+        },
+        {
+            "id": "2e4f7fd2-8840-4653-b75b-4b7956d21193",
+            "text": "Alert Rain",
+            "timestamp": "2025-07-16T00:00:42.551410"
+        }
+    ],
+    "events": [
+        {
+            "id": "ae3d1b56-8a3d-45f1-839f-091a3394f25c",
+            "text": "15 august next month",
+            "timestamp": "2025-07-15T23:42:03.865774"
+        },
+        {
+            "id": "13c92606-046c-4ad5-9a85-453b54ecd711",
+            "text": "Hello",
+            "timestamp": "2025-07-15T23:49:44.420307"
+        }
+    ],
+    "market": [
+        {
+            "id": "699625c0-e719-458c-b78c-6037a3fa1154",
+            "text": "One cycle available for buying | price-  4000",
+            "timestamp": "2025-07-15T23:38:13.150030"
+        }
+    ]
+}
